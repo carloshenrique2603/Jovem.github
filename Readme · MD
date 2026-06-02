@@ -1,0 +1,106 @@
+# 📻 Rádio Jovem FM — Site Completo para GitHub Pages
+
+## 📁 Estrutura de Arquivos
+
+```
+radiojovemfm/
+├── index.html          ← Site principal (página dos ouvintes)
+├── admin/
+│   └── index.html      ← Painel administrativo
+├── assets/
+│   └── logo.png        ← Sua logo (coloque aqui!)
+└── README.md
+```
+
+---
+
+## 🚀 Como publicar no GitHub Pages (passo a passo)
+
+### 1. Criar conta no GitHub
+- Acesse **github.com** e crie uma conta gratuita
+
+### 2. Criar um repositório
+1. Clique em **"New repository"** (botão verde)
+2. Nome sugerido: `radiojovemfm`
+3. Deixe **Public** marcado
+4. Clique em **"Create repository"**
+
+### 3. Fazer upload dos arquivos
+1. Na página do repositório, clique em **"uploading an existing file"**
+2. Arraste **todos os arquivos e pastas** desta pasta para lá
+3. Escreva uma mensagem: `Primeiro upload do site`
+4. Clique em **"Commit changes"**
+
+### 4. Ativar o GitHub Pages
+1. Vá em **Settings** (no repositório)
+2. No menu lateral, clique em **Pages**
+3. Em **Branch**, selecione `main` e a pasta `/root`
+4. Clique em **Save**
+5. Aguarde 1-2 minutos
+
+### 5. Seu site estará em:
+```
+https://SEU_USUARIO.github.io/radiojovemfm/
+```
+O admin estará em:
+```
+https://SEU_USUARIO.github.io/radiojovemfm/admin/
+```
+
+---
+
+## ⚙️ Configurações que você precisa alterar
+
+### No arquivo `index.html` (linha ~230):
+```javascript
+const STREAM_URL = "https://SEU_SERVIDOR_STREAM:8000/stream"; // ← URL do seu stream
+const WHATSAPP_NUMERO = "5545999999999"; // ← seu número (com DDI+DDD, sem +)
+```
+
+### No painel admin:
+- **Usuário padrão:** `admin`
+- **Senha padrão:** `jovemfm`
+- Mude a senha em: Admin → Configurações → Acesso ao Admin
+
+---
+
+## 🎙️ Como adicionar seu stream de rádio
+
+Para transmitir ao vivo, você precisa de um servidor de streaming. Opções:
+- **Radionomy** (gratuito)
+- **Zeno.fm** (gratuito, fácil)
+- **Icecast** (grátis, instala no servidor)
+- **Shoutcast** (popular)
+- **Azuracast** (recomendado, open source)
+
+Após obter a URL do stream (ex: `https://servidor.exemplo.com:8000/radio`), coloque no `index.html`.
+
+---
+
+## 📱 Pedidos por WhatsApp
+
+Os ouvintes podem pedir músicas pela página e o pedido vai direto para o seu WhatsApp.  
+Altere o número em `index.html`: `const WHATSAPP_NUMERO = "55DDD99999999"`
+
+---
+
+## 🖼️ Colocando sua logo
+
+1. Renomeie sua logo para `logo.png`
+2. Coloque dentro da pasta `assets/`
+3. Ela aparecerá automaticamente no site e no admin
+
+---
+
+## 💡 Dicas
+
+- Edite a **programação** diretamente no HTML (seção Programação em `index.html`)
+- O painel admin salva dados no **navegador** (localStorage) — sem banco de dados necessário
+- Para personalizar cores, edite as variáveis CSS no início de cada arquivo (`:root { ... }`)
+- Para domínio próprio (ex: radiojovemfm.com.br), configure em Settings → Pages → Custom domain
+
+---
+
+## 📞 Suporte
+
+Dúvidas? Pergunte ao Claude em claude.ai 🤖
